@@ -12,8 +12,9 @@ Usage:
 
 
 ### Example
-
+```html
 <button type="button" onclick="decodeBtn();"> Decode </button>
+```
 
 ```javascript
 var base64BinaryData = null ;
