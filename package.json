@@ -1,0 +1,44 @@
+{
+  "name": "cordova-plugin-bas64binary",
+  "version": "0.0.1",
+  "description": "A plugin that decodes (converts) base64binary data into a file. Open the decoded file using ios action sheet that gives you the options to open the file type. (e.g open text docs with MS Word, PDF docs with Adobe etc.)",
+  "cordova": {
+    "id": "cordova-plugin-base64binary",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hozwe/cordova-plugin-base64binary.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova:plugin",    
+    "decode",
+    "open files",
+    "base64",
+    "base64binary",
+    "binary",
+    "uiactionsheet",
+    "actionsheet",
+    "open with",
+    "file opener",
+    "open documents",
+    "cordova-ios"
+  ],
+  "engines": [{
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }],
+  "author": {
+    "name": "Josue Bustos",
+    "email": "josue@hackmedium.com",
+    "url": "http://www.hackmedium.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "shttps://github.com/hozwe/cordova-plugin-base64binary/isues"
+  },
+  "homepage": "https://github.com/hozwe/cordova-plugin-base64binary#readme"
+}
