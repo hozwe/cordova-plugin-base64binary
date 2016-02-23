@@ -1,7 +1,9 @@
-Base64ImageSaverPlugin
+cordova-plugin-base64binary
 ============
 
-This plugin(based on devgeeks/Canvas2ImagePlugin) allows you to save BASE64 data to the iOS Photo Library, Android Gallery or WindowsPhone 8 Photo Album from your app.
+This plugin decodes base64binary data. The data is converted into an actual file. (e.g Word Doc, PDF, JPG, PNG) 
+
+Note: Have not tested with Media files.
 
 Usage:
 ------
