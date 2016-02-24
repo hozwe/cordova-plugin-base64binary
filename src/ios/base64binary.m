@@ -1,20 +1,11 @@
-//
-//  ExternalFile.m
-//  FileCreate
-//
-//  Created by Josue Bustos on 12/2/13.
-//
-//
-
-
-#import "OpenWith.h"
+#import "base64biinary.h"
 #import <Cordova/CDV.h>
 #import "NSData+Base64.h"
 
-@implementation OpenWith
+@implementation DecodeUtil
 
 
-- (void) openWith:(CDVInvokedUrlCommand*)command;
+- (void) decodeUtil:(CDVInvokedUrlCommand*)command;
     {
         
         
@@ -64,8 +55,6 @@
         [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 
         
-        
-        
         // Get file again from Documents directory
         NSURL *fileURL = [NSURL fileURLWithPath:localFile];
         UIDocumentInteractionController *controller = [UIDocumentInteractionController  interactionControllerWithURL:fileURL];
@@ -75,19 +64,14 @@
         [controller retain];
 
         
-        
         CDVViewController* cont = (CDVViewController*)[ super viewController ];
         CGRect rect = CGRectMake(0, 0, 1500.0f, 50.0f);
         [controller presentOpenInMenuFromRect:rect inView:cont.view animated:YES];
-
-       
-
         
 }
     
 - (void) documentInteractionControllerDidDismissOpenInMenu:(UIDocumentInteractionController *)controller {
         NSLog(@"documentInteractionControllerDidDismissOpenInMenu");
-    
         
     [self cleanupTempFile:controller];
 }
@@ -117,6 +101,5 @@
         [localFile release];
         [controller release];
 }
-
 
 @end
