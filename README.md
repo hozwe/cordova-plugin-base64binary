@@ -17,10 +17,10 @@ Usage:
 ```
 
 ```javascript
-var base64BinaryData = null ;
 
-function decodeBtn(){
-  // WIP
+function startDecoding(){
+  decodeData.fileUtil(base64BinaryString, fileNameString);
+
 } 
 
 ```

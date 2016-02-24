@@ -1,4 +1,5 @@
 .DS_Store
 .project
 *.pyc
-.plugin.xml.swo
+*.swo
+*.m.swp

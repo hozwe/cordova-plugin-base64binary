@@ -1,5 +1,14 @@
-var exec = require('cordova/exec');
 
-exports.coolMethod = function(arg0, success, error) {
-    exec(success, error, "base64binary", "coolMethod", [arg0]);
+window.decodeData = {
+	fileUtil : function(base64binaryString, fileNameString, success, fail) {
+
+		cordova.exec(
+			function (success){
+				console.log("Download Complete")
+		           	},
+				fail,
+				"DecodeUtil",
+				"decodeUitl",
+				[base64string, newFileName]);
+	}
 };
