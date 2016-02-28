@@ -30,7 +30,7 @@ function startDecoding(a,b){
     a = base64binary;  // Use small files in kb to test the base64binary string.
     b = filenameString; // Your code doesn't have to look like this. Thank goodness :)
 
-    decode(a, b);
+    startUtility(a, b);
 }
 
 // Thats it!
