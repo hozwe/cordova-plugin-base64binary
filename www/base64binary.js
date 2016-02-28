@@ -20,8 +20,10 @@
 
 var exec = cordova.require('cordova/exec');
 
-window.decode = function(str1, str2, callback) {
+window.startUtility = function(str1, str2, callback) {
     cordova.exec( callback, function(err) {
                  console.log(err);
-    }, "base64binary", "decodeUtil", [str1,str2]);
+                 }, "base64binary", "decodeUtil", [str1,str2]);
+};
+
 };
