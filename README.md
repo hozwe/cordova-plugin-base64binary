@@ -5,7 +5,9 @@ This plugin decodes base64binary data. The data is then converted into a file. (
 
 The plugin also gives you the ios action sheet with options when the file finishes decoding.You may open the file with a third party application. 
 
-> Disclosure: This plugin will not guranteed that your file type will open with all third party ios applications. You will need to customize that feature base on your needs.
+**This text will be bold**
+
+> Disclosure: This plugin does not guarantee that your file type will open with all third party ios applications. You will need to customize that feature based on your needs.
 
 Usage:
 ------
