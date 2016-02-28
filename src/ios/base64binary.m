@@ -22,7 +22,7 @@
 #import <Cordova/CDV.h>
 #import "NSData+Base64.h"
 
-@implementation DecodeUtil
+@implementation base64binary
 
 
 - (void) decodeUtil:(CDVInvokedUrlCommand*)command;
@@ -38,7 +38,6 @@
 
     NSData *fileOnDevice = [NSData dataFromBase64String:base64string];
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
    
 
     localFile = [documentsDirectory stringByAppendingPathComponent:newFileName ];
