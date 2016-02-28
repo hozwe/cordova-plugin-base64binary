@@ -1,17 +1,23 @@
 cordova-plugin-base64binary
 ============
 
-This plugin decodes base64binary data. The data is then converted into a file. (e.g. Doc, PDF, JPG, PNG, MP3).
+This plugin decodes base64binary data via native Objective-C code then converted into a file. (See usage and the list of compatible files below).
 
 The plugin also gives you the ios action sheet with options when the file finishes decoding.You may open the file with a third party application. 
 
-** Some experimental goodness **
+-----
+
+Some experimenal features:
 * Send your image via tweet.
 * Send your image and or document via Gmail.
-* Open documents via Microsoft or a PDF like word processing application.
- 
+* Open documents via Microsoft or a PDF, like, word processing application.
+* More to come or yet to be discoverd. Stay tuned.
 
-> Disclosure: This plugin does not guarantee that your file type will open with all third party ios applications. You will need to customize that feature based on your needs.
+
+> Compatiple files when decoding: 
+> PNG, JPG, MP3, PDF, MS WORD, TXT, HTML.
+> The list will grow over time. Thank you for patience.
+
 
 Usage:
 ------
@@ -27,6 +33,8 @@ function startDecoding(a,b){
 }
 
 ```
+Thats it!
+
 
 ## License
 
