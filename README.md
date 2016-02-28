@@ -5,12 +5,10 @@ This plugin decodes base64binary data. The data is then converted into a file. (
 
 The plugin also gives you the ios action sheet with options when the file finishes decoding.You may open the file with a third party application. 
 
-**Some experimental goodness**
-* Item 1
-* Item 2
-*Send your image via tweet.
-*Send your image and or document via Gmail.
-*Open documents via Microsoft or a PDF like word processing application.
+** Some experimental goodness **
+* Send your image via tweet.
+* Send your image and or document via Gmail.
+* Open documents via Microsoft or a PDF like word processing application.
  
 
 > Disclosure: This plugin does not guarantee that your file type will open with all third party ios applications. You will need to customize that feature based on your needs.
