@@ -33,16 +33,19 @@
     
     NSString *base64string = [command.arguments objectAtIndex:0];
     NSString *newFileName = [command.arguments objectAtIndex:1];
-    NSString *uti = [command.arguments objectAtIndex:2];
-
-
     NSData *fileOnDevice = [NSData dataFromBase64String:base64string];
+    
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-   
-
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSLog(@"%@", paths);
+    
     localFile = [documentsDirectory stringByAppendingPathComponent:newFileName ];
     
+    
     [fileOnDevice writeToFile:localFile atomically:YES];
+    
+    
+    
     
     
     if (localFile != nil && [localFile length] > 1) {
@@ -56,7 +59,10 @@
     
     NSURL *fileURL = [NSURL fileURLWithPath:localFile];
     UIDocumentInteractionController *controller = [UIDocumentInteractionController  interactionControllerWithURL:fileURL];
+    
     controller.delegate = self;
+    
+    
     
     CDVViewController* cont = (CDVViewController*)[ super viewController ];
     CGRect rect = CGRectMake(0, 0, 1500.0f, 50.0f);
@@ -66,10 +72,12 @@
 
 - (void) documentInteractionControllerDidDismissOpenInMenu:(UIDocumentInteractionController *)controller {
     
+    
     [self cleanupTempFile:controller];
 }
 
 - (void) documentInteractionController: (UIDocumentInteractionController *) controller didEndSendingToApplication: (NSString *) application {
+    
     
     [self cleanupTempFile:controller];
 }
