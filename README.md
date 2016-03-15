@@ -5,14 +5,14 @@ This plugin decodes base64binary data via native Objective-C code.
 
 -----
 
-Some experimenal features:
+Some experimental features:
 * Send your image via tweet.
 * Send your image and or document via Gmail.
 * Open documents via Microsoft or a PDF, like, word processing application.
-* More to come or yet to be discoverd. Stay tuned.
+* More to come or yet to be discovered. Stay tuned.
 
 
-> Compatiple files when decoding: 
+> Compatible files when decoding: 
 > PNG, JPG, MP3, PDF, MS WORD, TXT, HTML.
 
 The list will grow over time. Thank you for patience.
