@@ -52,8 +52,7 @@
     }
     
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-    
-    
+        
     NSURL *fileURL = [NSURL fileURLWithPath:localFile];
     self.dcCtrl = [UIDocumentInteractionController  interactionControllerWithURL:fileURL];
     self.dcCtrl.delegate = self;
@@ -63,9 +62,7 @@
     CDVViewController* cont = (CDVViewController*)[ super viewController ];
     CGRect rect = CGRectMake(0, 0, 1500.0f, 50.0f);
     [self.dcCtrl presentOpenInMenuFromRect:rect inView:cont.view animated:YES];
-    
-    
-    
+  
 }
 
 - (void) documentInteractionControllerDidDismissOpenInMenu:(UIDocumentInteractionController *)controller {

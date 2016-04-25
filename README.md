@@ -1,14 +1,14 @@
 cordova-plugin-base64binary
 ============
 
-This plugin decodes base64binary data via native Objective-C code.
+This plugin decodes base64binary data via native Objective-C code and allows you to open the newly decoded file via third party iOS application.
 
 -----
 
 Some experimental features:
-* Send your image via tweet.
-* Send your image and or document via Gmail.
-* Open documents via Microsoft or a PDF, like, word processing application.
+* Send your image via Twitter, Instagram, Facebook, LinkedIn, Gmail.
+* Send your Document file via Gmail.
+* Open documents via Microsoft or a PDF, word processing application.
 * More to come or yet to be discovered. Stay tuned.
 
 
@@ -16,6 +16,7 @@ Some experimental features:
 > PNG, JPG, MP3, PDF, MS WORD, TXT, HTML.
 
 The list will grow over time. Thank you for patience.
+
 
 -----
 
@@ -25,12 +26,18 @@ Usage:
 
 ```javascript
 
-function startDecoding(a,b){
-    
-    a = base64binary;  // Use small files in kb to test the base64binary string.
-    b = filenameString; // Your code doesn't have to look like this. Thank goodness :)
+function startDecoding(a,b,c){
 
-    startUtility(a, b);
+    // Use small files in kb to test the base64binary string.
+    a = base64binary;      
+    
+    // full name of the file with extension. (e.g something.ext )
+    b = filenameString;
+    
+    // a file type extension goes here.
+    c = uti;
+    
+    startUtility(a, b, c);
 }
 
 // Thats it!
