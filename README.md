@@ -34,7 +34,7 @@ function startDecoding(a,b,c){
     // full name of the file with extension. (e.g something.ext )
     b = filenameString;
     
-    // a file type extension goes here.
+    // a file type extension goes here. (e.g "pdf" without the period )
     c = uti;
     
     startUtility(a, b, c);
