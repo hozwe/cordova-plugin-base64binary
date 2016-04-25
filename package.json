@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-base64binary",
-  "version": "0.0.7",
+  "version": "0.0.10",
   "description": "Decode base64binary data which is  then converted into a file. Open file using iOS action sheet via third party apps, when applicable.",
   "cordova": {
     "id": "cordova-plugin-base64binary",

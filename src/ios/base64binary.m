@@ -24,15 +24,16 @@
 
 @implementation base64binary
 
+@synthesize dcCtrl;
 
 - (void) decodeUtil:(CDVInvokedUrlCommand*)command;
 {
-    
     
     CDVPluginResult* pluginResult = nil;
     
     NSString *base64string = [command.arguments objectAtIndex:0];
     NSString *newFileName = [command.arguments objectAtIndex:1];
+    NSString *uti = [command.arguments objectAtIndex:2];
     
     
     NSData *fileOnDevice = [NSData dataFromBase64String:base64string];
@@ -54,23 +55,25 @@
     
     
     NSURL *fileURL = [NSURL fileURLWithPath:localFile];
-    UIDocumentInteractionController *controller = [UIDocumentInteractionController  interactionControllerWithURL:fileURL];
-    controller.delegate = self;
+    self.dcCtrl = [UIDocumentInteractionController  interactionControllerWithURL:fileURL];
+    self.dcCtrl.delegate = self;
+    self.dcCtrl.UTI = uti;
+    
     
     CDVViewController* cont = (CDVViewController*)[ super viewController ];
     CGRect rect = CGRectMake(0, 0, 1500.0f, 50.0f);
-    [controller presentOpenInMenuFromRect:rect inView:cont.view animated:YES];
+    [self.dcCtrl presentOpenInMenuFromRect:rect inView:cont.view animated:YES];
+    
+    
     
 }
 
 - (void) documentInteractionControllerDidDismissOpenInMenu:(UIDocumentInteractionController *)controller {
     
-    [self cleanupTempFile:controller];
 }
 
 - (void) documentInteractionController: (UIDocumentInteractionController *) controller didEndSendingToApplication: (NSString *) application {
     
-    [self cleanupTempFile:controller];
 }
 
 - (void) cleanupTempFile: (UIDocumentInteractionController *) controller

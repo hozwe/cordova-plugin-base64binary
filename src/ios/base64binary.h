@@ -26,6 +26,9 @@
     NSString *localFile;
 }
 
+@property (nonatomic, strong) UIDocumentInteractionController *dcCtrl;
+
+
 - (void) decodeUtil:(CDVInvokedUrlCommand*)command;
 
 - (void) cleanupTempFile: (UIDocumentInteractionController *)controller;
