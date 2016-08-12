@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-base64binary",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Decode base64binary data which is  then converted into a file. Open file using iOS action sheet via third party apps, when applicable.",
   "cordova": {
     "id": "cordova-plugin-base64binary",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hozwe/cordova-plugin-base64binary.git"
+    "url": "git+https://github.com/josuebustos/cordova-plugin-base64binary.git"
   },
   "keywords": [
     "ecosystem:cordova",
@@ -36,7 +36,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "shttps://github.com/hozwe/cordova-plugin-base64binary/isues"
+    "url": "shttps://github.com/josuebustos/cordova-plugin-base64binary/issues"
   },
-  "homepage": "https://github.com/hozwe/cordova-plugin-base64binary#readme"
+  "homepage": "https://github.com/josuebustos/cordova-plugin-base64binary#readme"
 }
