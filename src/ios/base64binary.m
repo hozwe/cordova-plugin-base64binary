@@ -37,8 +37,10 @@
     
     
     NSData *fileOnDevice = [NSData dataFromBase64String:base64string];
+
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
+    
     
     localFile = [documentsDirectory stringByAppendingPathComponent:newFileName ];
     
@@ -62,11 +64,11 @@
     CDVViewController* cont = (CDVViewController*)[ super viewController ];
     CGRect rect = CGRectMake(0, 0, 1500.0f, 50.0f);
     [self.dcCtrl presentOpenInMenuFromRect:rect inView:cont.view animated:YES];
-  
+
 }
 
 - (void) documentInteractionControllerDidDismissOpenInMenu:(UIDocumentInteractionController *)controller {
-    
+
 }
 
 - (void) documentInteractionController: (UIDocumentInteractionController *) controller didEndSendingToApplication: (NSString *) application {
@@ -79,6 +81,7 @@
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSError *error;
     BOOL fileExists = [fileManager fileExistsAtPath:localFile];
+    
     
     if (fileExists)
     {
